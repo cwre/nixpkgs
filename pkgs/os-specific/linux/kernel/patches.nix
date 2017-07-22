@@ -112,6 +112,14 @@ rec {
       patch = ./chromiumos-patches/mfd-fix-dependency.patch;
     };
 
+  apple_gmux =
+    { name = "apple_gmux";
+      patch = fetchpatch {
+        url = "https://aur.archlinux.org/cgit/aur.git/plain/apple-gmux.patch?h=linux-macbook";
+        sha256 = "14rm1qr87p7a5prz8g5fwbpxzdp3ighj095x8rvhm8csm20wspyy";
+      };
+    };
+
   hiddev_CVE_2016_5829 =
     { name = "hiddev_CVE_2016_5829";
       patch = fetchpatch {
